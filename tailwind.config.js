@@ -22,6 +22,13 @@ const minSpacingPixel = 0;
 const maxSpacingPixel = 1200;
 const spacingPixelIncrement = 5;
 
+const minRoundedPixel = 0;
+const maxRoundedPixel = 1000;
+
+const minPaddingPixel = -100;
+const maxPaddingPixel = 300;
+
+
 const vhs = ['10vh', '20vh', '30vh', '40vh', '50vh', '60vh', '70vh', '80vh', '90vh', '100vh'];
 
 module.exports = {
@@ -36,8 +43,22 @@ module.exports = {
       'xl': '1280px',
       '2xl': '1536px',
     },
+    fontWeight: {
+      hairline: 100,
+      'extra-light': 100,
+      thin: 200,
+      light: 300,
+      normal: 400,
+      medium: 500,
+      semibold: 600,
+      bold: 700,
+      extrabold: 800,
+      'extra-bold': 800,
+      black: 900,
+    },
     colors: {
       white: '#FFFFFF',
+      transparent: 'transparent',
       primary: {
         DEFAULT: '#07A39D',
         50: '#E5F6F6',
@@ -46,10 +67,11 @@ module.exports = {
         200: '#009993',
         300: '#008F89',
         400: '#00857F',
+        500: '#47D0CB'
       },
       secondary: {
         DEFAULT: '#0A2540',
-        50: '#D2E3F3',
+        50: '#143D64',
         100: '#0A2540',
       },
       success: {
@@ -74,6 +96,8 @@ module.exports = {
         75: '#FFA3A3',
         100: '#E54D4D',
         200: '#CC4545',
+        300: '#35070d',
+        400: '#711b26'
       },
       light: {
         DEFAULT: '#D6D6D6',
@@ -84,7 +108,12 @@ module.exports = {
         300: '#989898',
         400: '#6D6D6D',
         500: '#2C2C2C',
+        600: '#F5F5F5'
       },
+      dark: {
+        DEFAULT: '#111111',
+        100: '#111111'
+      }
     },
     container: {
       padding: {
@@ -96,6 +125,15 @@ module.exports = {
     },
     fontSize: {
       ...range(minFontSize, maxFontSize).reduce((merged, f) => ({ ...merged, [f]: `${f}px`}), {})
+    },
+    borderRadius : {
+      ...range(minRoundedPixel, maxRoundedPixel).reduce((merged, f) => ({ ...merged, [f]: `${f}px`}), {}),
+    },
+    padding : {
+      ...range(minPaddingPixel, maxPaddingPixel).reduce((merged, f) => ({ ...merged, [f]: `${f}px`}), {})
+    },
+    lineHeight:{
+      ...range(minPaddingPixel, maxPaddingPixel).reduce((merged, f) => ({ ...merged, [f]: `${f}px`}), {})
     },
     spacing: {
       ...range(minSpacingPixel, maxSpacingPixel, spacingPixelIncrement).reduce((merged, f) => ({ ...merged, [f]: `${f}px` }), {})
@@ -119,9 +157,9 @@ module.exports = {
     },
     boxShadow: {
       primary: '0 5px 24px -10px rgba(0, 0, 0, 0.15)',
-      DEFAULT: '0 5px 24px -10px rgba(0, 0, 0, 0.15)',
+      DEFAULT: '0 10px 20px -5px rgba(211, 113, 0, 0.4)',
       secondary: '0 5px 20px rgba(0, 0, 0, 0.07)',
-      warning: '0 10px 20px -5px rgba(211, 113, 0, 0.4)',
+      yellow: '0 10px 10px -10px rgba(211, 113, 0, 0.2)',
       light: '0 4px 20px -14px rgba(38, 50, 56, 0.35)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
