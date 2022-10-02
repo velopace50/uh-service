@@ -1,10 +1,10 @@
-import React from "react"
+import React from 'react';
 
-import Amex from "../img/Amex.png"
-import Logo from '../img/logo.png'
-import MC from "../img/MC.png"
-import Social from "../img/Social.png"
-import Visa from "../img/Visa.png"
+import Amex from '../img/Amex.png';
+import Logo from '../img/logo.png';
+import MC from '../img/MC.png';
+import Social from '../img/Social.png';
+import Visa from '../img/Visa.png';
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex flex-col items-center lg:flex-row lg:justify-between">
         <div className="text-14 font-medium flex flex-wrap justify-center mb-40 lg:flex-col">
           <div className="pr-50">
-            <img src={ Logo } alt="logo"/>
+            <img src={Logo} alt="logo" />
           </div>
           <div className="ml-20 lg:ml-0">
             <p className="text-white  lg:pt-56">Need help?</p>
@@ -44,13 +44,13 @@ const Footer = () => {
           <div className="text-white pr-40">
             <h5 className="text-18 font-medium pb-20">Follow Us</h5>
             <div>
-              <img src={ Social } alt="Social"/>
+              <img src={Social} alt="Social" />
             </div>
             <h6 className="text-14 font-normal pb-20 pt-40">We accept</h6>
             <div className="flex justify-between">
-              <img src={ Visa } alt="Visa"/>
-              <img src={ MC } alt="Mc"/>
-              <img src={ Amex } alt="Amex"/>
+              <img src={Visa} alt="Visa" />
+              <img src={MC} alt="Mc" />
+              <img src={Amex} alt="Amex" />
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Footer = () => {
         <h6>Privacy Policy, Terms & Conditions, Refund Policy.</h6>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
